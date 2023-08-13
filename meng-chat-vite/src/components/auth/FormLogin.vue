@@ -5,7 +5,8 @@ import type ElMessage from 'element-plus'
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 import { authLogin } from '@/api/auth/index'
-import {loginType} from '@/types/auth'
+import { loginType } from '@/types/auth'
+import router from '@/router';
 const { authStatus, changeStatus } = (useAuthComponent())
 const { loginForm } = storeToRefs(useAuthComponent())
 
@@ -17,12 +18,8 @@ const changeShow = () => {
     show.value = !show.value
 }
 
-
 const login = async (loginForm: loginType) => {
-    console.log(loginForm);
     const res = await authLogin(loginForm)
-    console.log(res);
-
     if (res.code == 200) {
         //@ts-ignore
         ElMessage({
@@ -30,9 +27,11 @@ const login = async (loginForm: loginType) => {
             message: '登录成功'
         })
         //@ts-ignore
-       store.setUser(res.data.token)
+        store.setToken(res.data)
+
+        router.push('/')
     }
-    
+
 }
 </script>
 

@@ -7,27 +7,31 @@ nprogress.configure({ showSpinner: false });
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    redirect: "/auth",
+    redirect: "/home",
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import("@/layout/home/index.vue"),
+        meta: {
+          title: '首页'
+        }
+      }
+    ]
   },
   {
     path: "/auth",
     name: "Auth",
     component: () => import("@/views/auth/auth.vue"),
+    meta: {
+      title: '登录'
+    }
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
-
-router.beforeEach((_from, _to, next) => {
-  nprogress.start();
-  next();
-});
-router.afterEach((to: any) => {
-  nprogress.done();
-  document.title = to.meta.title || "檬";
 });
 
 export default router;

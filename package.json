@@ -14,12 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "eslint": "^8.42.0",
-    "husky": "^8.0.0"
-  },
-  "dependencies": {
-    "husky": "^8.0.3"
+    "eslint": "^8.42.0"
   }
 }
