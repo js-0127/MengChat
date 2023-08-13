@@ -1,3 +1,3 @@
-import {request} from '@/utils/request'
+import { request } from "@/utils/request";
 
-export const getHello = () => request('/hello', 'GET')
+export const getHello = () => request("/hello", "GET");

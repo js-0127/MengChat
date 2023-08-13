@@ -1,34 +1,33 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
-//@ts-ignore
-import nprogress from 'nprogress'
+import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+//@ts-expect-error
+import nprogress from "nprogress";
 //引入进度条样式
-import 'nprogress/nprogress.css'
-nprogress.configure({ showSpinner: false })
+import "nprogress/nprogress.css";
+nprogress.configure({ showSpinner: false });
 const routes: RouteRecordRaw[] = [
-    {
-        path: '/',
-        redirect: '/auth'
-    },
-    {
-        path: '/auth',
-        name: 'Auth',
-        component: () => import('@/views/auth.vue')
-    }
-]
+  {
+    path: "/",
+    redirect: "/auth",
+  },
+  {
+    path: "/auth",
+    name: "Auth",
+    component: () => import("@/views/auth/auth.vue"),
+  },
+];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+  history: createWebHistory(),
+  routes,
+});
 
 router.beforeEach((_from, _to, next) => {
-    nprogress.start()
-    next()
-
-})
+  nprogress.start();
+  next();
+});
 router.afterEach((to: any) => {
-    nprogress.done()
-    document.title = to.meta.title || '檬'
-})
+  nprogress.done();
+  document.title = to.meta.title || "檬";
+});
 
-export default router
+export default router;

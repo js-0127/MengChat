@@ -12,9 +12,12 @@
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\""
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "axios": "^1.4.0",
+    "element-plus": "^2.3.9",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.3.4",
     "vue-router": "4"
   },
@@ -34,6 +37,8 @@
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.9",
     "vue-tsc": "^1.8.5"
   }

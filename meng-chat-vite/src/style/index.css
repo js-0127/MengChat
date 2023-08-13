@@ -5,3 +5,25 @@
 * {
  user-select: none;
 }
+.el-message--error  {
+  background-color: rgb(248,114,114) !important;
+  border: rgb(248,114,114) !important;
+  border-radius: 16px !important;
+
+}
+.el-message-icon--error{
+   color: rgb(71,0,0) !important
+}
+.el-message__content {
+   color: rgb(71,0,0) !important
+}
+
+.el-message--success {
+    background-color:  rgb(54, 211, 153) !important;
+    border: rgb(54,211,153) !important;
+    border-radius: 16px !important;
+}
+
+.el-message-icon--success {
+   color: rgb(0,51,32) !important;
+}
