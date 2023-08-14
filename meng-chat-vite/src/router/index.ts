@@ -1,20 +1,58 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
-//@ts-expect-error
-import nprogress from "nprogress";
-//引入进度条样式
-import "nprogress/nprogress.css";
-nprogress.configure({ showSpinner: false });
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
   {
     path: "/",
     redirect: "/home",
+    component: () => import('@/layout/index.vue'),
     children: [
       {
         path: '/home',
         name: 'Home',
-        component: () => import("@/layout/home/index.vue"),
+        component: () => import("@/views/home/index.vue"),
         meta: {
-          title: '首页'
+          title: '首页',
+          icon: 'message',
+          activeIcon: 'message-active'
+        }
+      },
+
+      {
+        path: '/message',
+        name: 'Message',
+        component: () => import("@/views/message/index.vue"),
+        meta: {
+          title: '消息',
+          icon: 'message',
+          activeIcon: 'message-active'
+        }
+      },
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import("@/views/about/index.vue"),
+        meta: {
+          title: '更多',
+          icon: 'message'
+        }
+      },
+      {
+        path: '/address',
+        name: 'Address',
+        component: () => import("@/views/address/index.vue"),
+        meta: {
+          title: '通讯录',
+          icon: 'address',
+          activeIcon: 'address-active'
+        }
+      },
+      {
+        path: '/calender',
+        name: 'Calender',
+        component: () => import("@/views/calender/index.vue"),
+        meta: {
+          title: '日历',
+          icon: 'calender',
+          activeIcon: 'calender-active'
         }
       }
     ]
