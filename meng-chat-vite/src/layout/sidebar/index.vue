@@ -48,11 +48,12 @@ const routeIsActive = (targetRoute: RouteRecordRaw) => {
         background-color: rgb(38, 50, 73);
         cursor: pointer;
         border-radius: 12px;
-
-        .message {
-                color: white
-        }
 }
+
+.item:hover .message {
+        color: white
+}
+
 
 .message {
         font-family: sans-serif;
@@ -62,9 +63,9 @@ const routeIsActive = (targetRoute: RouteRecordRaw) => {
 .active {
         background-color: rgb(38, 50, 73);
         border-radius: 12px;
+}
 
-        .message {
-                color: white
-        }
+.active .message {
+        color: white
 }
 </style>

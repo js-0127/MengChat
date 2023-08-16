@@ -5,15 +5,14 @@ import Sidebar from './sidebar/index.vue'
 </script>
 
 <template>
-  <div class="h-screen w-screen layout relative">
-    <div class="tabbar h-16 fixed top-0  left-16">
+  <div class="h-screen layout w-screen relative">
+    <div class="tabbar h-14 fixed top-0 left-16">
       <Tabbar></Tabbar>
     </div>
     <div class="sidebar h-full w-16">
-    
       <Sidebar></Sidebar>
     </div>
-    <div class="main absolute top-16 left-16">
+    <div class="main absolute top-14 left-16">
       <Main></Main>
     </div>
   </div>
@@ -21,15 +20,20 @@ import Sidebar from './sidebar/index.vue'
 
 <style scoped>
 .layout {
-  background-color: rgb(55, 68, 99);
+    background-color: #242e4a;
 }
-
 .tabbar {
   width: calc(100% - 4rem);
+  background: linear-gradient(to left, #384868 20%, #242e4a 40%, #384868 100%);
 }
 
 .main {
+  background-color: #384868; 
   width: calc(100% - 4rem);
-  height: calc(100% - 4rem);
+  height: calc(100% - 3.5rem);
+}
+
+.sidebar {
+  background: linear-gradient(#384868 50%, #242e4a 100%);
 }
 </style>

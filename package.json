@@ -5,10 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
-    "fomat": "vite meng-chat-vite",
-    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

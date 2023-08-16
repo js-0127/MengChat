@@ -12,7 +12,7 @@
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\""
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.3.0",
     "axios": "^1.4.0",
     "element-plus": "^2.3.9",
     "nprogress": "^0.2.0",

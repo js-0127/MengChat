@@ -26,15 +26,7 @@ export const routes: RouteRecordRaw[] = [
           activeIcon: 'message-active'
         }
       },
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import("@/views/about/index.vue"),
-        meta: {
-          title: '更多',
-          icon: 'message'
-        }
-      },
+
       {
         path: '/address',
         name: 'Address',
@@ -54,7 +46,17 @@ export const routes: RouteRecordRaw[] = [
           icon: 'calender',
           activeIcon: 'calender-active'
         }
-      }
+      },
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import("@/views/about/index.vue"),
+        meta: {
+          title: '更多',
+          icon: 'about',
+          activeIcon: 'about-active'
+        }
+      },
     ]
   },
   {

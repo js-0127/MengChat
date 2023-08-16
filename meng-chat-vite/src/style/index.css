@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 * {
+box-sizing: border-box;
  user-select: none;
+}
+li {
+ list-style: none;
+}
+textarea {
+    resize: none;
 }
 .el-message--error  {
   background-color: rgb(248,114,114) !important;
