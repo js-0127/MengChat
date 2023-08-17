@@ -5,7 +5,7 @@ import ChatBox from './chatBox/index.vue'
 
 
 <template>
-        <div class="w-full h-full rounded-tl-2xl relative  bg-indigo-400 ">
+        <div class="w-full h-full rounded-tl-2xl relative bg-[] ">
                 <SideBar></SideBar>
                 <ChatBox></ChatBox>
         </div>

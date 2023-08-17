@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-        <aside class="w-96 bg-white  h-full  rounded-tl-2xl overflow-x-hidden overflow-y-auto  py-3">
+        <aside class=" w-80 bg-white  h-full  rounded-tl-2xl overflow-x-hidden overflow-y-auto  py-3">
                 <nav class="h-12 fixed top-14 z-20 bg-white w-96 rounded-tl-2xl flex px-3 mr-2 items-center">
                         <div class="h-8 w-8 icon flex justify-center items-center">
                                 <img src="/src/assets/icons/list.svg" alt="" class="w-4 h-4">
@@ -9,16 +9,16 @@
                         <span class="text-base pl-1">消息</span>
                 </nav>
                 <main class=" chatList p-3 z-0 h-auto w-full pr-2  flex flex-col items-center overflow-y-auto mt-5">
-                        <li class="chat  rounded-md h-16  w-full mt-1 flex items-center " v-for="i in 15" :key="i">
+                        <li class="chat transition-all delay-200 ease-in hover:cursor-pointer pr-2 hover:bg-[#f4f4f4]  rounded-md h-16  w-full mt-1 flex items-center " v-for="i in 15" :key="i">
                                 <div class="avatar rounded-3xl h-10 w-10 ml-2">
                                         <img src="/src/assets/15.jpg" alt="" class=" h-full w-full  rounded-3xl">
                                 </div>
                                 <div class="composing flex flex-col ml-2 w-5/6">
                                         <div class="top flex justify-between">
-                                                <h3 class="title text-md">丁璐瑶</h3>
-                                                <h6 class="date  text-gray-400 ">2022年8月19日</h6>
+                                                <h3 class=" text-[#1f2329] text-md">丁璐瑶</h3>
+                                                <h6 class=" text-[13px] text-gray-400 ">8月19日</h6>
                                         </div>
-                                        <span class="content  text-gray-400">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</span>
+                                        <span class="text-[13px] whitespace-nowrap overflow-hidden  w-3/4 text-ellipsis text-gray-400">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</span>
                                 </div>
                         </li>
                 </main>
@@ -82,29 +82,5 @@ aside:hover .chatList {
 .chatList::-webkit-scrollbar-thumb:hover {
         background-color: rgb(121, 123, 127);
         /* 设置鼠标悬浮时滑块的背景颜色 */
-}
-
-.chat {
-        transition: all .3s ease;
-}
-
-.chat:hover {
-        cursor: pointer;
-        background-color: rgb(244, 244, 244);
-}
-
-.title {
-        color: #1f2329
-}
-
-.date {
-        font-size: 13px;
-}
-
-.content {
-        font-size: 13px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
 }
 </style>

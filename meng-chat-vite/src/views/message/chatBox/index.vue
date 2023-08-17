@@ -9,24 +9,32 @@ const isDisabled = computed(() => {
 </script>
 
 <template>
-        <article class="chatBox absolute top-0 left-96  h-full">
-                <header class="navbar fixed w-full h-16"></header>
-                <main class="chatContent w-full h-auto overflow-auto"></main>
-                <footer class="footer h-12 fixed bottom-4 rounded-xl flex items-center">
+        <article class="chatBox absolute top-0  left-80  h-full bg-[#fcfcfc]">
+                <header class="navbar bg-[#fbfbfc] fixed w-full h-16"></header>
+                <main class="chatContent bg-[#fcfcfc] w-full h-auto overflow-auto"></main>
+                <footer class="footer h-12 fixed  bottom-4 rounded-xl flex items-center">
                         <textarea ref="textarea" v-model="chatValue"
                                 class="input h-full focus:outline-none w-full rounded-lg px-2 py-3" placeholder="发送给 丁璐瑶" />
-                        <div class="ability fixed bottom-4 right-8 w-auto h-12 flex items-center justify-between">
-                                <button class="sendIcon h-7 w-8 flex justify-center items-center rounded-lg">
-                                        <img src="/src/assets/icons/emoji.svg" alt="" class="w-5 h-5" />
-                                </button>
-                                <button class="sendIcon h-7 w-8 flex justify-center items-center rounded-lg">
-                                        <img src="/src/assets/icons/more.svg" alt="" class="w-5 h-5" />
-                                </button>
-                                <button type="button" :class="{ isDisabled: isDisabled, send: !isDisabled }"
-                                        class="h-7 w-9 flex justify-center items-center z-10 rounded-lg">
-                                        <img :src="`/src/assets/icons/${isDisabled ? 'send' : 'send-active'}.svg`" alt=""
-                                                class="w-6 h-6" />
-                                </button>
+                        <div class="ability fixed bottom-4 right-24 w-auto h-12 flex items-center justify-between">
+                                <el-tooltip class="box-item" effect="dark" content="表情" placement="top">
+                                        <button class="sendIcon h-7 w-8 flex justify-center items-center rounded-lg">
+                                                <img src="/src/assets/icons/emoji.svg" alt="" class="w-5 h-5" />
+                                        </button>
+                                </el-tooltip>
+
+                                <el-tooltip class="box-item" effect="dark" content="更多" placement="top">
+                                        <button class="sendIcon h-7 w-8 flex justify-center items-center rounded-lg">
+                                                <img src="/src/assets/icons/more.svg" alt="" class="w-5 h-5" />
+                                        </button>
+                                </el-tooltip>
+
+                                <el-tooltip class="box-item" effect="dark" content="发送" placement="top">
+                                        <button type="button" :class="{ isDisabled: isDisabled, send: !isDisabled }"
+                                                class="h-7 w-9 flex justify-center items-center z-10 rounded-lg">
+                                                <img :src="`/src/assets/icons/${isDisabled ? 'send' : 'send-active'}.svg`"
+                                                        alt="" class="w-6 h-6" />
+                                        </button>
+                                </el-tooltip>
                         </div>
                 </footer>
 
@@ -66,11 +74,10 @@ const isDisabled = computed(() => {
 
 ::-webkit-scrollbar {
         /* 设置滚动条宽度 */
-        width: 8px;
+        width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-        height: 10px;
         background-color: rgb(180, 182, 183);
         /* 设置滑块的背景颜色 */
         border-radius: 5px;
@@ -83,22 +90,19 @@ const isDisabled = computed(() => {
 }
 
 .chatBox {
-        background-color: rgb(252, 252, 252);
-        width: calc(100% - 384px);
+        width: calc(100% - 320px);
 }
 
 .chatBox>.chatContent {
-        background-color: rgb(252, 252, 252);
         height: calc(100% - 80px);
 }
 
 .navbar {
-        background-color: rgb(251, 251, 252);
         border-bottom: 1px solid rgb(219, 219, 220);
 }
 
 .footer {
-        left: 465px;
+        left: 400px;
         width: calc(100% - 480px);
         border: 1px solid rgb(222, 222, 223);
 }

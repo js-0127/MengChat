@@ -15,6 +15,7 @@ declare module 'vue' {
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
     FormLogin: typeof import('./src/components/auth/FormLogin.vue')['default']
     FormRegister: typeof import('./src/components/auth/FormRegister.vue')['default']
     FormTitle: typeof import('./src/components/auth/FormTitle.vue')['default']
